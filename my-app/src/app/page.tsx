@@ -1,10 +1,10 @@
-import Image from "next/image";
+import EzzieS from './components/ezzieS';
 
 export default function Home() {
   return (
     <main>
       <div className="h-screen bg-slate-500">
-       <p>hello</p>
+        <EzzieS />
       </div>
     </main>
   );

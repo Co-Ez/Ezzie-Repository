@@ -7,14 +7,14 @@ export default function EzzieS() {
             backgroundRepeat: `no-repeat`,
             backgroundSize: `cover`
         }}>
-            <h1 className="p-2 text-center text-5xl">My Website!</h1>
+            
             <div className="ml-auto mr-auto flex" style={{
-                height: `650px`,
-                width: `1500px`
+                height: `100vh`
             }}>
-                <div className="min-w-full min-h-full bg-gray-600/75 overflow-auto inline-block ml-auto mr-auto">
+                <div className="min-w-fit min-h-full bg-gray-600/75 overflow-auto inline-block ml-auto mr-auto">
+                    <h1 className="p-2 text-center text-5xl">My Website!</h1>
                     <h2 className="pl-2 text-lg">Images:</h2>
-                    <img className="pl-4 pt-2" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTVbCxkT0Q3UV36nni8epTYBb2LfvA5IqczA&usqp=CAU' />
+                    <img className="px-2 pt-2 ml-auto mr-auto" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTVbCxkT0Q3UV36nni8epTYBb2LfvA5IqczA&usqp=CAU' />
 
                 </div>
             </div>

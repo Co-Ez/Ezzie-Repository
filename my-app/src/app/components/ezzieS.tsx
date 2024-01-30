@@ -7,23 +7,15 @@ export default function EzzieS() {
             backgroundRepeat: `no-repeat`,
             backgroundSize: `cover`
         }}>
-            <h1 className="text-center">Let's make some bread!</h1>
+            <h1 className="p-2 text-center text-5xl">My Website!</h1>
             <div className="ml-auto mr-auto flex" style={{
-                height: `700px`,
+                height: `650px`,
                 width: `1500px`
             }}>
-                <div className="overflow-auto inline-block ml-auto mr-auto">
-                    <p>0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</p>
-                    <img className="ml-auto mr-auto" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTVbCxkT0Q3UV36nni8epTYBb2LfvA5IqczA&usqp=CAU' />
-                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTVbCxkT0Q3UV36nni8epTYBb2LfvA5IqczA&usqp=CAU' />
-                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTVbCxkT0Q3UV36nni8epTYBb2LfvA5IqczA&usqp=CAU' />
-                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTVbCxkT0Q3UV36nni8epTYBb2LfvA5IqczA&usqp=CAU' />
-                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTVbCxkT0Q3UV36nni8epTYBb2LfvA5IqczA&usqp=CAU' />
-                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTVbCxkT0Q3UV36nni8epTYBb2LfvA5IqczA&usqp=CAU' />
-                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTVbCxkT0Q3UV36nni8epTYBb2LfvA5IqczA&usqp=CAU' />
-                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTVbCxkT0Q3UV36nni8epTYBb2LfvA5IqczA&usqp=CAU' />
-                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTVbCxkT0Q3UV36nni8epTYBb2LfvA5IqczA&usqp=CAU' />
-                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTVbCxkT0Q3UV36nni8epTYBb2LfvA5IqczA&usqp=CAU' />
+                <div className="min-w-full min-h-full bg-gray-600/75 overflow-auto inline-block ml-auto mr-auto">
+                    <h2 className="pl-2 text-lg">Images:</h2>
+                    <img className="pl-4 pt-2" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTVbCxkT0Q3UV36nni8epTYBb2LfvA5IqczA&usqp=CAU' />
+
                 </div>
             </div>
         </div>

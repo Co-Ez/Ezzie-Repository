@@ -3,7 +3,7 @@ import React from "react";
 export default function EzzieS() {
     return (
         <div className='min-h-full min-w-full' style={{
-            backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTVbCxkT0Q3UV36nni8epTYBb2LfvA5IqczA&usqp=CAU")`,
+            backgroundImage: `url(/img/web_background.jpg)`,
             backgroundRepeat: `no-repeat`,
             backgroundSize: `cover`
         }}>

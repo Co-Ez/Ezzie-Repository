@@ -56,27 +56,27 @@ export default function BathReplica() {
                 Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
                 Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
             </div>
-            <div className="ml-10 bg-sky-900" style={{
+            <div className="ml-8 bg-sky-900" style={{
                 paddingTop: `8px`
             }}>
                 <div className="min-h-14 bg-sky-500 flex" style={{
                         width: `75%`
                     }}>
-                    <button type="button" className="mt-auto mb-auto ml-2 " style={{height: `56px`}}>Placeholder</button>
-                    <button type="button" className="mt-auto mb-auto ml-2 " style={{height: `56px`}}>Placeholder</button>
-                    <button type="button" className="mt-auto mb-auto ml-2 " style={{height: `56px`}}>Placeholder</button>
-                    <button type="button" className="mt-auto mb-auto ml-2 " style={{height: `56px`}}>Placeholder</button>
+                    <button type="button" className="mt-auto mb-auto pl-2 pr-2 bg-white text-sky-500" style={{height: `56px`}}>Placeholder</button>
+                    <button type="button" className="mt-auto mb-auto pl-2 pr-2" style={{height: `56px`}}>Placeholder</button>
+                    <button type="button" className="mt-auto mb-auto pl-2 pr-2" style={{height: `56px`}}>Placeholder</button>
+                    <button type="button" className="mt-auto mb-auto pl-2 pr-2" style={{height: `56px`}}>Placeholder</button>
                 </div>
             </div>
             <div className="flex">
-                <img src="/img/BathBG.jpg" className="mb-20 ml-10" style={{
+                <img src="/img/BathBG.jpg" className="mb-16 ml-8" style={{
                     width: `150px`,
                     height: `150px`,
                     border: `7px solid #FFF`,
                     borderRadius: `24px`
                 }}></img>
-                <h1 className="text-white text-5xl ml-10 mt-3 overline decoration-amber-300">Placeholder</h1>
-                <h1 className="text-white absolute mt-16 text-lg" style={{marginLeft: `232px`}}>Placeholder</h1>
+                <h1 className="text-white text-5xl ml-8 mt-3 overline decoration-amber-300">Placeholder</h1>
+                <h1 className="text-white absolute mt-16 text-lg" style={{marginLeft: `216px`}}>Placeholder</h1>
             </div>
         </div>
     );

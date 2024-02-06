@@ -12,7 +12,7 @@ export default function BathReplica() {
         }}>
             
             
-            <div className="min-w-full min-h-40 max-h-40 bg-white">
+            <div className="min-w-full min-h-28 max-h-28 bg-white">
                 Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
                 Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
                 Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
@@ -57,12 +57,14 @@ export default function BathReplica() {
                 Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
             </div>
             <div className="ml-8 bg-sky-900" style={{
-                paddingTop: `8px`
+                paddingTop: `8px`,
+                background: `#005A71`
             }}>
-                <div className="min-h-14 bg-sky-500 flex" style={{
-                        width: `75%`
+                <div className="min-h-14 flex" style={{
+                        width: `75%`,
+                        backgroundColor: `#00B0BD`
                     }}>
-                    <button type="button" className="mt-auto mb-auto pl-2 pr-2 bg-white text-sky-500" style={{height: `56px`}}>Placeholder</button>
+                    <button type="button" className="mt-auto mb-auto pl-2 pr-2 bg-white" style={{height: `56px`, color: `#00B0BD`}}>Placeholder</button>
                     <button type="button" className="mt-auto mb-auto pl-2 pr-2" style={{height: `56px`}}>Placeholder</button>
                     <button type="button" className="mt-auto mb-auto pl-2 pr-2" style={{height: `56px`}}>Placeholder</button>
                     <button type="button" className="mt-auto mb-auto pl-2 pr-2" style={{height: `56px`}}>Placeholder</button>
@@ -75,7 +77,7 @@ export default function BathReplica() {
                     border: `7px solid #FFF`,
                     borderRadius: `24px`
                 }}></img>
-                <h1 className="text-white text-5xl ml-8 mt-3 overline decoration-amber-300">Placeholder</h1>
+                <h1 className="text-white text-5xl ml-8 mt-3 overline" style={{textDecorationColor: `#EA8000`}}>Placeholder</h1>
                 <h1 className="text-white absolute mt-16 text-lg" style={{marginLeft: `216px`}}>Placeholder</h1>
             </div>
         </div>

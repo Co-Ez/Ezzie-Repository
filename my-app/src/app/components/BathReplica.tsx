@@ -53,11 +53,11 @@ export default function BathReplica() {
             </div> }
 
             <div className="ml-6 bg-sky-900" style={{
-                paddingTop: `8px`,
+                paddingTop: `10px`,
                 background: `#35779C`
             }}>
                 <div className="min-h-14 flex" style={{
-                        width: `75%`,
+                        width: `80%`,
                         backgroundColor: `#3BC0C7`
                     }}>
                     <button type="button" className={page === 1 ? SelectedClass : UnselectedClass} id="b1" style={{height: `56px`}} onClick={Switch}>Placeholder</button>

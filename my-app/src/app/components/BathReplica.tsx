@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 
 export default function BathReplica() {
+    const [page, setPage] = useState(1);
+    
     const Switch = () => {
         document.getElementById("b1").style.color = "#00B0BD";
         document.getElementById("b1").style.backgroundColor = "white";
@@ -15,6 +17,8 @@ export default function BathReplica() {
 
         document.getElementById("b4").style.color = "black";
         document.getElementById("b4").style.backgroundColor = "";
+
+        setPage(1);
     }
 
     const Switch2 = () => {
@@ -29,6 +33,8 @@ export default function BathReplica() {
 
         document.getElementById("b4").style.color = "black";
         document.getElementById("b4").style.backgroundColor = "";
+
+        setPage(2);
     }
 
     const Switch3 = () => {
@@ -43,6 +49,8 @@ export default function BathReplica() {
 
         document.getElementById("b4").style.color = "black";
         document.getElementById("b4").style.backgroundColor = "";
+
+        setPage(3);
     }
 
     const Switch4 = () => {
@@ -57,6 +65,8 @@ export default function BathReplica() {
 
         document.getElementById("b3").style.color = "black";
         document.getElementById("b3").style.backgroundColor = "";
+
+        setPage(4);
     }
 
     return(
@@ -68,50 +78,23 @@ export default function BathReplica() {
         }}>
             
             
-            <div className="min-w-full min-h-28 max-h-28 bg-white">
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-                Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder Placeholder 
-            </div>
+            { page === 1 && <div className="min-w-full min-h-28 max-h-28 bg-white">
+                This is number 1
+                <img src="" className="ml-auto mr-auto"></img>
+            </div> }
+            { page === 2 && <div className="min-w-full min-h-28 max-h-28 bg-white">
+                This is number 2
+                <img src="" className="ml-auto mr-auto"></img>
+            </div> }
+            { page === 3 && <div className="min-w-full min-h-28 max-h-28 bg-white">
+                This is number 3
+                <img src="" className="ml-auto mr-auto"></img>
+            </div> }
+            { page === 4 && <div className="min-w-full min-h-28 max-h-28 bg-white">
+                This is number 4
+                <img src="" className="ml-auto mr-auto"></img>
+            </div> }
+
             <div className="ml-8 bg-sky-900" style={{
                 paddingTop: `8px`,
                 background: `#005A71`
@@ -120,7 +103,7 @@ export default function BathReplica() {
                         width: `75%`,
                         backgroundColor: `#00B0BD`
                     }}>
-                    <button type="button" className="mt-auto mb-auto pl-2 pr-2" id="b1" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
+                    <button type="button" className="mt-auto mb-auto pl-2 pr-2" id="b1" style={{height: `56px`, color: `#00B0BD`, backgroundColor: `white`}} onClick={Switch}>Placeholder</button>
                     <button type="button" className="mt-auto mb-auto pl-2 pr-2" id="b2" style={{height: `56px`}} onClick={Switch2}>Placeholder</button>
                     <button type="button" className="mt-auto mb-auto pl-2 pr-2" id="b3" style={{height: `56px`}} onClick={Switch3}>Placeholder</button>
                     <button type="button" className="mt-auto mb-auto pl-2 pr-2" id="b4" style={{height: `56px`}} onClick={Switch4}>Placeholder</button>

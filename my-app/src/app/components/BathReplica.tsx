@@ -1,72 +1,54 @@
 'use client'
 
-import React, { useState } from "react";
+import "./css/classes.css";
+import React, { use, useState } from "react";
 
 export default function BathReplica() {
     const [page, setPage] = useState(1);
+    const [B1Class, setB1Class] = useState("mt-auto mb-auto pl-2 pr-2 selected");
+    const [B2Class, setB2Class] = useState("mt-auto mb-auto pl-2 pr-2 unselected");
+    const [B3Class, setB3Class] = useState("mt-auto mb-auto pl-2 pr-2 unselected");
+    const [B4Class, setB4Class] = useState("mt-auto mb-auto pl-2 pr-2 unselected");
     
-    const Switch = () => {
-        document.getElementById("b1").style.color = "#00B0BD";
-        document.getElementById("b1").style.backgroundColor = "white";
+    const Switch = (event: { currentTarget: { id: React.SetStateAction<string>; }; }) => {
+        console.log(event.currentTarget.id);
 
-        document.getElementById("b2").style.color = "black";
-        document.getElementById("b2").style.backgroundColor = "";
-        
-        document.getElementById("b3").style.color = "black";
-        document.getElementById("b3").style.backgroundColor = "";
-
-        document.getElementById("b4").style.color = "black";
-        document.getElementById("b4").style.backgroundColor = "";
-
-        setPage(1);
-    }
-
-    const Switch2 = () => {
-        document.getElementById("b2").style.color = "#00B0BD";
-        document.getElementById("b2").style.backgroundColor = "white";
-
-        document.getElementById("b1").style.color = "black";
-        document.getElementById("b1").style.backgroundColor = "";
-        
-        document.getElementById("b3").style.color = "black";
-        document.getElementById("b3").style.backgroundColor = "";
-
-        document.getElementById("b4").style.color = "black";
-        document.getElementById("b4").style.backgroundColor = "";
-
-        setPage(2);
-    }
-
-    const Switch3 = () => {
-        document.getElementById("b3").style.color = "#00B0BD";
-        document.getElementById("b3").style.backgroundColor = "white";
-
-        document.getElementById("b1").style.color = "black";
-        document.getElementById("b1").style.backgroundColor = "";
-        
-        document.getElementById("b2").style.color = "black";
-        document.getElementById("b2").style.backgroundColor = "";
-
-        document.getElementById("b4").style.color = "black";
-        document.getElementById("b4").style.backgroundColor = "";
-
-        setPage(3);
-    }
-
-    const Switch4 = () => {
-        document.getElementById("b4").style.color = "#00B0BD";
-        document.getElementById("b4").style.backgroundColor = "white";
-
-        document.getElementById("b1").style.color = "black";
-        document.getElementById("b1").style.backgroundColor = "";
-        
-        document.getElementById("b2").style.color = "black";
-        document.getElementById("b2").style.backgroundColor = "";
-
-        document.getElementById("b3").style.color = "black";
-        document.getElementById("b3").style.backgroundColor = "";
-
-        setPage(4);
+        if (event.currentTarget.id === "b1") {
+            
+            setB1Class("mt-auto mb-auto pl-2 pr-2 selected");
+            setB2Class("mt-auto mb-auto pl-2 pr-2 unselected");
+            setB3Class("mt-auto mb-auto pl-2 pr-2 unselected");
+            setB4Class("mt-auto mb-auto pl-2 pr-2 unselected");
+            
+            setPage(1);
+        }
+        else if (event.currentTarget.id === "b2") {
+            
+            setB2Class("mt-auto mb-auto pl-2 pr-2 selected");
+            setB1Class("mt-auto mb-auto pl-2 pr-2 unselected");
+            setB3Class("mt-auto mb-auto pl-2 pr-2 unselected");
+            setB4Class("mt-auto mb-auto pl-2 pr-2 unselected");
+            
+            setPage(2);
+        }
+        else if (event.currentTarget.id === "b3") {
+            
+            setB3Class("mt-auto mb-auto pl-2 pr-2 selected");
+            setB1Class("mt-auto mb-auto pl-2 pr-2 unselected");
+            setB2Class("mt-auto mb-auto pl-2 pr-2 unselected");
+            setB4Class("mt-auto mb-auto pl-2 pr-2 unselected");
+            
+            setPage(3);
+        }
+        else {
+            
+            setB4Class("mt-auto mb-auto pl-2 pr-2 selected");
+            setB1Class("mt-auto mb-auto pl-2 pr-2 unselected");
+            setB2Class("mt-auto mb-auto pl-2 pr-2 unselected");
+            setB3Class("mt-auto mb-auto pl-2 pr-2 unselected");
+            
+            setPage(4);
+        }
     }
 
     return(
@@ -103,10 +85,10 @@ export default function BathReplica() {
                         width: `75%`,
                         backgroundColor: `#00B0BD`
                     }}>
-                    <button type="button" className="mt-auto mb-auto pl-2 pr-2" id="b1" style={{height: `56px`, color: `#00B0BD`, backgroundColor: `white`}} onClick={Switch}>Placeholder</button>
-                    <button type="button" className="mt-auto mb-auto pl-2 pr-2" id="b2" style={{height: `56px`}} onClick={Switch2}>Placeholder</button>
-                    <button type="button" className="mt-auto mb-auto pl-2 pr-2" id="b3" style={{height: `56px`}} onClick={Switch3}>Placeholder</button>
-                    <button type="button" className="mt-auto mb-auto pl-2 pr-2" id="b4" style={{height: `56px`}} onClick={Switch4}>Placeholder</button>
+                    <button type="button" className={B1Class} id="b1" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
+                    <button type="button" className={B2Class} id="b2" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
+                    <button type="button" className={B3Class} id="b3" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
+                    <button type="button" className={B4Class} id="b4" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
                 </div>
             </div>
             <div className="flex">

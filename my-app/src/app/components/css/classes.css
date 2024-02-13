@@ -1,0 +1,8 @@
+.selected {
+    background-color: white;
+    color: turquoise;
+}
+.unselected {
+    background-color: transparent;
+    color: black;
+}

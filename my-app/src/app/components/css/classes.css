@@ -1,8 +1,15 @@
-.selected {
-    background-color: white;
-    color: darkturquoise;
-}
-.unselected {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .selected {
+        background-color: white;
+        color: rgb(59, 192, 199);
+        transition: ease-in 0.1s;
+    }
+  }
+ .unselected {
     background-color: transparent;
     color: black;
 }

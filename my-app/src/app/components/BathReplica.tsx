@@ -6,7 +6,7 @@ import React, { use, useState } from "react";
 export default function BathReplica() {
     const [page, setPage] = useState(1);
     const SelectedClass = "mt-auto mb-auto pl-2 pr-2 selected";
-    const UnselectedClass = "mt-auto mb-auto pl-2 pr-2 unselected";
+    const UnselectedClass = "mt-auto mb-auto pl-2 pr-2 hover:selected unselected";
     
     const Switch = (event: { currentTarget: { id: React.SetStateAction<string>; }; }) => {
         console.log(event.currentTarget.id);
@@ -52,13 +52,13 @@ export default function BathReplica() {
                 <img src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg" className="ml-auto mr-auto"></img>
             </div> }
 
-            <div className="ml-8 bg-sky-900" style={{
+            <div className="ml-6 bg-sky-900" style={{
                 paddingTop: `8px`,
-                background: `steelblue`
+                background: `#35779C`
             }}>
                 <div className="min-h-14 flex" style={{
                         width: `75%`,
-                        backgroundColor: `darkturquoise`
+                        backgroundColor: `#3BC0C7`
                     }}>
                     <button type="button" className={page === 1 ? SelectedClass : UnselectedClass} id="b1" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
                     <button type="button" className={page === 2 ? SelectedClass : UnselectedClass} id="b2" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
@@ -67,14 +67,14 @@ export default function BathReplica() {
                 </div>
             </div>
             <div className="flex">
-                <img src="/img/BathBG.jpg" className="mb-16 ml-8" style={{
+                <img src="/img/BathBG.jpg" className="mb-16 ml-6" style={{
                     width: `150px`,
                     height: `150px`,
                     border: `7px solid #FFF`,
                     borderRadius: `24px`
                 }}></img>
-                <h1 className="text-white text-5xl ml-8 mt-3 overline" style={{textDecorationColor: `orange`}}>Placeholder</h1>
-                <h1 className="text-white absolute mt-16 text-lg" style={{marginLeft: `216px`}}>Placeholder</h1>
+                <h1 className="text-white text-5xl ml-8 mt-3 overline" style={{textDecorationColor: `#FBAF17`}}>Placeholder</h1>
+                <h1 className="text-white absolute mt-16 text-lg" style={{marginLeft: `208px`}}>Placeholder</h1>
             </div>
         </div>
     );

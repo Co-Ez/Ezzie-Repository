@@ -67,7 +67,7 @@ export default function BathReplica() {
                 </div>
             </div>
             <div className="flex">
-                <img src="/img/BathBG.jpg" className="mb-16 ml-6" style={{
+                <img src="/img/BathBG.jpg" className="mb-16 ml-6" onClick={() => setPage(1)} style={{
                     width: `150px`,
                     height: `150px`,
                     border: `7px solid #FFF`,

@@ -1,5 +1,6 @@
 'use client'
 
+import {motion} from "framer-motion"
 import "./css/classes.css";
 import React, { use, useState } from "react";
 
@@ -38,6 +39,10 @@ export default function BathReplica() {
             { page === 1 && <div className="min-w-full min-h-28 max-h-28 bg-white">
                 This is number 1
                 <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" className="ml-auto mr-auto"></img>
+                <motion.div
+                animate={{ x: 100 }}
+                transition={{ delay: 1 }}
+                    />
             </div> }
             { page === 2 && <div className="min-w-full min-h-28 max-h-28 bg-white">
                 This is number 2

@@ -5,48 +5,22 @@ import React, { use, useState } from "react";
 
 export default function BathReplica() {
     const [page, setPage] = useState(1);
-    const [B1Class, setB1Class] = useState("mt-auto mb-auto pl-2 pr-2 selected");
-    const [B2Class, setB2Class] = useState("mt-auto mb-auto pl-2 pr-2 unselected");
-    const [B3Class, setB3Class] = useState("mt-auto mb-auto pl-2 pr-2 unselected");
-    const [B4Class, setB4Class] = useState("mt-auto mb-auto pl-2 pr-2 unselected");
+    const SelectedClass = "mt-auto mb-auto pl-2 pr-2 selected";
+    const UnselectedClass = "mt-auto mb-auto pl-2 pr-2 unselected";
     
     const Switch = (event: { currentTarget: { id: React.SetStateAction<string>; }; }) => {
         console.log(event.currentTarget.id);
 
         if (event.currentTarget.id === "b1") {
-            
-            setB1Class("mt-auto mb-auto pl-2 pr-2 selected");
-            setB2Class("mt-auto mb-auto pl-2 pr-2 unselected");
-            setB3Class("mt-auto mb-auto pl-2 pr-2 unselected");
-            setB4Class("mt-auto mb-auto pl-2 pr-2 unselected");
-            
             setPage(1);
         }
         else if (event.currentTarget.id === "b2") {
-            
-            setB2Class("mt-auto mb-auto pl-2 pr-2 selected");
-            setB1Class("mt-auto mb-auto pl-2 pr-2 unselected");
-            setB3Class("mt-auto mb-auto pl-2 pr-2 unselected");
-            setB4Class("mt-auto mb-auto pl-2 pr-2 unselected");
-            
             setPage(2);
         }
         else if (event.currentTarget.id === "b3") {
-            
-            setB3Class("mt-auto mb-auto pl-2 pr-2 selected");
-            setB1Class("mt-auto mb-auto pl-2 pr-2 unselected");
-            setB2Class("mt-auto mb-auto pl-2 pr-2 unselected");
-            setB4Class("mt-auto mb-auto pl-2 pr-2 unselected");
-            
             setPage(3);
         }
-        else {
-            
-            setB4Class("mt-auto mb-auto pl-2 pr-2 selected");
-            setB1Class("mt-auto mb-auto pl-2 pr-2 unselected");
-            setB2Class("mt-auto mb-auto pl-2 pr-2 unselected");
-            setB3Class("mt-auto mb-auto pl-2 pr-2 unselected");
-            
+        else {    
             setPage(4);
         }
     }
@@ -86,10 +60,10 @@ export default function BathReplica() {
                         width: `75%`,
                         backgroundColor: `darkturquoise`
                     }}>
-                    <button type="button" className={B1Class} id="b1" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
-                    <button type="button" className={B2Class} id="b2" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
-                    <button type="button" className={B3Class} id="b3" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
-                    <button type="button" className={B4Class} id="b4" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
+                    <button type="button" className={page === 1 ? SelectedClass : UnselectedClass} id="b1" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
+                    <button type="button" className={page === 2 ? SelectedClass : UnselectedClass} id="b2" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
+                    <button type="button" className={page === 3 ? SelectedClass : UnselectedClass} id="b3" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
+                    <button type="button" className={page === 4 ? SelectedClass : UnselectedClass} id="b4" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
                 </div>
             </div>
             <div className="flex">

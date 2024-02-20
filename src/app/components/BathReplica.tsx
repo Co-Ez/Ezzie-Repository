@@ -40,28 +40,32 @@ export default function BathReplica() {
                 This is number 1
                 <motion.img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" className="ml-auto mr-auto" 
                     initial={{ scale: 0.001 }} 
-                    animate={{ scale: 1 }}>
+                    animate={{ scale: 1 }}
+                    transition={{ type: "spring", bounce: 0.5 }}>
                 </motion.img>
             </div> }
             { page === 2 && <div className="min-w-full min-h-28 max-h-28 bg-white">
                 This is number 2
                 <motion.img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" className="ml-auto mr-auto"
                     initial={{ scale: 0.001 }} 
-                    animate={{ scale: 1 }}>
+                    animate={{ scale: 1 }}
+                    transition={{ type: "spring", bounce: 0.5 }}>
                 </motion.img>
             </div> }
             { page === 3 && <div className="min-w-full min-h-28 max-h-28 bg-white">
                 This is number 3
                 <motion.img src="https://images.pexels.com/photos/355508/pexels-photo-355508.jpeg?cs=srgb&dl=pexels-pixabay-355508.jpg&fm=jpg" className="ml-auto mr-auto"
                     initial={{ scale: 0.001 }} 
-                    animate={{ scale: 1 }}>
+                    animate={{ scale: 1 }}
+                    transition={{ type: "spring", bounce: 0.5 }}>
                 </motion.img>
             </div> }
             { page === 4 && <div className="min-w-full min-h-28 max-h-28 bg-white">
                 This is number 4
                 <motion.img src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg" className="ml-auto mr-auto"
                     initial={{ scale: 0.001 }} 
-                    animate={{ scale: 1 }}>
+                    animate={{ scale: 1 }}
+                    transition={{ type: "spring", bounce: 0.5 }}>
                 </motion.img>
             </div> }
 
@@ -73,7 +77,7 @@ export default function BathReplica() {
                         width: `80%`,
                         backgroundColor: `#3BC0C7`
                     }}>
-                    <button type="button" className={page === 1 ? SelectedClass : UnselectedClass} id="b1" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
+                    <motion.button type="button" className={page === 1 ? SelectedClass : UnselectedClass} id="b1" style={{height: `56px`}} onClick={Switch} animate={{scale:1}} whileDrag={{}} transition={{}}>Placeholder</motion.button>
                     <button type="button" className={page === 2 ? SelectedClass : UnselectedClass} id="b2" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
                     <button type="button" className={page === 3 ? SelectedClass : UnselectedClass} id="b3" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
                     <button type="button" className={page === 4 ? SelectedClass : UnselectedClass} id="b4" style={{height: `56px`}} onClick={Switch}>Placeholder</button>

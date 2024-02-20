@@ -43,7 +43,7 @@ export default function BathReplica() {
         show: {
             opacity: 1,
             transition: {
-                type: "backIn"
+                type: "circIn"
             }
         }
     }

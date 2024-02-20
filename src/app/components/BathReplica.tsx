@@ -38,19 +38,31 @@ export default function BathReplica() {
 
             { page === 1 && <div className="min-w-full min-h-28 max-h-28 bg-white">
                 This is number 1
-                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" className="ml-auto mr-auto"></img>
+                <motion.img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" className="ml-auto mr-auto" 
+                    initial={{ scale: 0.001 }} 
+                    animate={{ scale: 1 }}>
+                </motion.img>
             </div> }
             { page === 2 && <div className="min-w-full min-h-28 max-h-28 bg-white">
                 This is number 2
-                <img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" className="ml-auto mr-auto"></img>
+                <motion.img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" className="ml-auto mr-auto"
+                    initial={{ scale: 0.001 }} 
+                    animate={{ scale: 1 }}>
+                </motion.img>
             </div> }
             { page === 3 && <div className="min-w-full min-h-28 max-h-28 bg-white">
                 This is number 3
-                <img src="https://images.pexels.com/photos/355508/pexels-photo-355508.jpeg?cs=srgb&dl=pexels-pixabay-355508.jpg&fm=jpg" className="ml-auto mr-auto"></img>
+                <motion.img src="https://images.pexels.com/photos/355508/pexels-photo-355508.jpeg?cs=srgb&dl=pexels-pixabay-355508.jpg&fm=jpg" className="ml-auto mr-auto"
+                    initial={{ scale: 0.001 }} 
+                    animate={{ scale: 1 }}>
+                </motion.img>
             </div> }
             { page === 4 && <div className="min-w-full min-h-28 max-h-28 bg-white">
                 This is number 4
-                <img src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg" className="ml-auto mr-auto"></img>
+                <motion.img src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg" className="ml-auto mr-auto"
+                    initial={{ scale: 0.001 }} 
+                    animate={{ scale: 1 }}>
+                </motion.img>
             </div> }
 
             <div className="ml-6 bg-sky-900" style={{

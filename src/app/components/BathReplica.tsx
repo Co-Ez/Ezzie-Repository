@@ -8,7 +8,8 @@ export default function BathReplica() {
     const [page, setPage] = useState(1);
     const SelectedClass = "mt-auto mb-auto pl-2 pr-2 selected";
     const UnselectedClass = "mt-auto mb-auto pl-2 pr-2 hover:selected unselected";
-    const imgClass = "ml-auto mr-auto";
+    const imgClass = "w-28 p-1 grow ml-auto mr-auto basis-1/4";
+    
     const container = {
         hidden: {
             opacity: 0
@@ -24,6 +25,33 @@ export default function BathReplica() {
         hidden: {opacity: 0},
         show: {opacity: 1}
     }
+    const item2 = {
+        hidden: {scale: 0.001},
+        show: {
+            scale: 1,
+            transition: {
+                type: "spring", bounce: 0.5
+            }
+        }
+    }
+    const item3 = {
+        hidden: {opacity: 0, rotate: 0},
+        show: {opacity: 1, rotate: 360}
+    }
+    const item4 = {
+        hidden: {opacity: 0, skew: 0},
+        show: {
+            opacity: 1,
+            transition: {
+                type: "backIn"
+            }
+        }
+    }
+
+    const img = <motion.img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" className={imgClass} variants={item}></motion.img>
+    const img2 = <motion.img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" className={imgClass} variants={item2}></motion.img>
+    const img3 = <motion.img src="https://images.pexels.com/photos/355508/pexels-photo-355508.jpeg?cs=srgb&dl=pexels-pixabay-355508.jpg&fm=jpg" className={imgClass} variants={item3}></motion.img>
+    const img4 = <motion.img src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg" className={imgClass} variants={item4}></motion.img>
     
     const Switch = (event: { currentTarget: { id: React.SetStateAction<string>; }; }) => {
         console.log(event.currentTarget.id);
@@ -44,7 +72,6 @@ export default function BathReplica() {
             setPage(5);
         }
     }
-
 
     return(
         <div className="min-h-full min-w-full flex flex-col-reverse" style={{
@@ -94,12 +121,23 @@ export default function BathReplica() {
 
             { page === 5 && <div className="min-w-full min-h-28 max-h-28 bg-white flex-wrap">
                 <h1>A fifth page 🤔</h1>
-                <motion.div className="flex flex-row" variants={container} initial="hidden" animate="show">
-                    <motion.img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" className={imgClass} variants={item} style={{width: 100, height: 100}}></motion.img>
-                    <motion.img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" className={imgClass} variants={item} style={{width: 100, height: 100}}></motion.img>
-                    <motion.img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" className={imgClass} variants={item} style={{width: 100, height: 100}}></motion.img>
-                    <motion.img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" className={imgClass} variants={item} style={{width: 100, height: 100}}></motion.img>
-                    <motion.img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" className={imgClass} variants={item} style={{width: 100, height: 100}}></motion.img>
+                <motion.div className="flex flex-wrap" variants={container} initial="hidden" animate="show">
+                    {img}
+                    {img2}
+                    {img3}
+                    {img4}
+                    {img}
+                    {img2}
+                    {img3}
+                    {img4}
+                    {img}
+                    {img2}
+                    {img3}
+                    {img4}
+                    {img}
+                    {img2}
+                    {img3}
+                    {img4}
                 </motion.div>
             </div>}
 

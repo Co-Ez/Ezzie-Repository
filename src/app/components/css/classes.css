@@ -8,8 +8,8 @@
         color: rgb(59, 192, 199);
         transition: ease-in 0.1s;
     }
-  }
- .unselected {
-    background-color: transparent;
-    color: black;
+    .unselected {
+        background-color: transparent;
+        color: black;
+    }
 }

@@ -8,6 +8,22 @@ export default function BathReplica() {
     const [page, setPage] = useState(1);
     const SelectedClass = "mt-auto mb-auto pl-2 pr-2 selected";
     const UnselectedClass = "mt-auto mb-auto pl-2 pr-2 hover:selected unselected";
+    const imgClass = "ml-auto mr-auto";
+    const container = {
+        hidden: {
+            opacity: 0
+        },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.5
+            }
+        }
+    }
+    const item = {
+        hidden: {opacity: 0},
+        show: {opacity: 1}
+    }
     
     const Switch = (event: { currentTarget: { id: React.SetStateAction<string>; }; }) => {
         console.log(event.currentTarget.id);
@@ -21,8 +37,11 @@ export default function BathReplica() {
         else if (event.currentTarget.id === "b3") {
             setPage(3);
         }
-        else {    
+        else if (event.currentTarget.id === "b4"){    
             setPage(4);
+        }
+        else {
+            setPage(5);
         }
     }
 
@@ -36,6 +55,7 @@ export default function BathReplica() {
         }}>
             
 
+            
             { page === 1 && <div className="min-w-full min-h-28 max-h-28 bg-white">
                 This is number 1
                 <motion.img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" className="ml-auto mr-auto" 
@@ -44,6 +64,7 @@ export default function BathReplica() {
                     transition={{ type: "spring", bounce: 0.5 }}>
                 </motion.img>
             </div> }
+            
             { page === 2 && <div className="min-w-full min-h-28 max-h-28 bg-white">
                 This is number 2
                 <motion.img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" className="ml-auto mr-auto"
@@ -52,6 +73,7 @@ export default function BathReplica() {
                     transition={{ type: "spring", bounce: 0.5 }}>
                 </motion.img>
             </div> }
+            
             { page === 3 && <div className="min-w-full min-h-28 max-h-28 bg-white">
                 This is number 3
                 <motion.img src="https://images.pexels.com/photos/355508/pexels-photo-355508.jpeg?cs=srgb&dl=pexels-pixabay-355508.jpg&fm=jpg" className="ml-auto mr-auto"
@@ -60,6 +82,7 @@ export default function BathReplica() {
                     transition={{ type: "spring", bounce: 0.5 }}>
                 </motion.img>
             </div> }
+            
             { page === 4 && <div className="min-w-full min-h-28 max-h-28 bg-white">
                 This is number 4
                 <motion.img src="https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg" className="ml-auto mr-auto"
@@ -68,6 +91,17 @@ export default function BathReplica() {
                     transition={{ type: "spring", bounce: 0.5 }}>
                 </motion.img>
             </div> }
+
+            { page === 5 && <div className="min-w-full min-h-28 max-h-28 bg-white flex-wrap">
+                <h1>A fifth page 🤔</h1>
+                <motion.div className="flex flex-row" variants={container} initial="hidden" animate="show">
+                    <motion.img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" className={imgClass} variants={item} style={{width: 100, height: 100}}></motion.img>
+                    <motion.img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" className={imgClass} variants={item} style={{width: 100, height: 100}}></motion.img>
+                    <motion.img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" className={imgClass} variants={item} style={{width: 100, height: 100}}></motion.img>
+                    <motion.img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" className={imgClass} variants={item} style={{width: 100, height: 100}}></motion.img>
+                    <motion.img src="https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630" className={imgClass} variants={item} style={{width: 100, height: 100}}></motion.img>
+                </motion.div>
+            </div>}
 
             <div className="ml-6 bg-sky-900" style={{
                 paddingTop: `10px`,
@@ -81,6 +115,7 @@ export default function BathReplica() {
                     <button type="button" className={page === 2 ? SelectedClass : UnselectedClass} id="b2" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
                     <button type="button" className={page === 3 ? SelectedClass : UnselectedClass} id="b3" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
                     <button type="button" className={page === 4 ? SelectedClass : UnselectedClass} id="b4" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
+                    <button type="button" className={page === 5 ? SelectedClass : UnselectedClass} id="b5" style={{height: `56px`}} onClick={Switch}>Placeholder</button>
                 </div>
             </div>
             <div className="flex">
